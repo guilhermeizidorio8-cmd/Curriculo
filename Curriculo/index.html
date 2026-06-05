@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Guilherme Izidorio</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <header class="header-profile">
+            <div class="profile-info">
+                <h1>Guilherme Izidorio</h1>
+                <ul class="contact-list">
+                    <li>(73) 99857-9334</li>
+                    <li>guilhermeizidorio8@gmail.com</li>
+                    <li>São Judas, Bahia</li>
+                </ul>
+            </div>
+            <div class="profile-photo">
+                <img src="img/minha-foto.png" alt="Foto de Guilherme Izidorio">
+            </div>
+        </header>
+
+        <section class="section-summary">
+            <span class="close-btn">&times;</span> <h2>Resumo Profissional</h2>
+            <p>Estudante de Sistemas de Informação e Técnico em Informática com experiência prática em infraestrutura, suporte técnico e gestão de laboratórios de TI. Desenvolvo sistemas e aplicações web utilizando Java, C/C++, PHP e HTML/CSS. Busco oportunidades na área de tecnologia para aplicar minha capacidade lógica na resolução de problemas e no ciclo de desenvolvimento de software.</p>
+        </section>
+
+        <section class="section-education">
+            <span class="close-btn">&times;</span> <h2>Formação Acadêmica</h2>
+            
+            <div class="education-item">
+                <div class="item-header">
+                    <h3>Sistema de Informação (Cursando)</h3>
+                </div>
+                <p class="badge">Nível: Superior</p>
+                <p class="institution">Universidade Estadual do Sudoeste da Bahia - UESB</p>
+                <p class="period">Período: 02/2026 - Presente | Previsão de Conclusão: 12/2029</p>
+            </div>
+
+            <div class="education-item">
+                <div class="item-header">
+                    <h3>Técnico em Informática (Concluído)</h3>
+                </div>
+                <p class="badge">Nível: Técnico</p>
+                <p class="institution">Instituto Federal da Bahia - IFBA</p>
+                <p class="period">Período: 01/2024 - 06/2025 | Conclusão: 06/2025</p>
+            </div>
+        </section>
+
+        <section class="section-experience">
+            <span class="close-btn">&times;</span> <h2>Experiência Profissional</h2>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <h3>Suporte ao Cliente / Atendimento Administrativo</h3>
+                    <span class="company">SPEEDNET TELECOM</span>
+                </div>
+                <p class="period">Período: 07/2025 - 08/2025 (Meio Período)</p>
+                <ul class="task-list">
+                    <li>Realizei verificação e manutenção preditiva e corretiva de redes de computadores.</li>
+                    <li>Prestei atendimento técnico e administrativo a clientes de forma proativa.</li>
+                    <li>Desenvolvi e gerenciei planilhas e documentação operacional.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <h3>Estagiário de TI (Não Remunerado)</h3>
+                    <span class="company">IFBA</span>
+                </div>
+                <p class="period">Período: 05/2025 - 09/2025</p>
+                <ul class="task-list">
+                    <li>Efetuei manutenção de hardware e software em computadores do laboratório.</li>
+                    <li>Supervisionei o laboratório de computação, garantindo a ordem e o bom funcionamento.</li>
+                    <li>Atuei como monitor de TI, auxiliando estudantes com dificuldades técnicas.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section-skills">
+            <span class="close-btn">&times;</span> <h2>Competências e Conhecimentos</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Tecnológicas</h3>
+                    <ul>
+                        <li>Informática Geral (Intermediário)</li>
+                        <li>Redes de Computadores (Intermediário)</li>
+                        <li>Manutenção de Computadores (Avançado)</li>
+                        <li>Desenvolvimento Frontend (Intermediário)</li>
+                        <li>Desenvolvimento Backend (Intermediário)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Administrativas</h3>
+                    <ul>
+                        <li>Conhecimentos Administrativos (Intermediário)</li>
+                        <li>Pacote Office (Básico)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Idiomas</h3>
+                    <ul>
+                        <li>Inglês (Básico)</li>
+                        <li>Espanhol (Básico)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="section-links">
+            <span class="close-btn">&times;</span> <h2>Link</h2>
+
+            <div class="links-item">
+                <div class="item-header">
+                    <h3>GitHub</h3>
+                </div>
+                <p><a class="badge" href="https://github.com/guilhermeizidorio8-cmd" target="_blank">Link de acesso para o perfil</a></p>
+            </div>
+            <div class="links-item">
+                <div class="item-header">
+                    <h3>Linkedin</h3>
+                </div>
+                <p><a class="badge" href="https://www.linkedin.com/in/guilherme-izidorio-14a835381/" target="_blank">Link de acesso para o perfil</a></p>
+            </div>
+        </section>
+    </div>
+<script>
+        const sections = document.querySelectorAll('section');
+
+        sections.forEach(section => {
+            const title = section.querySelector('h2');
+            const closeBtn = section.querySelector('.close-btn');
+
+            title.addEventListener('click', function() {
+                if(!this.classList.contains('is-open')){
+                    section.classList.add('is-open');
+                }
+            });
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function(event) {
+                    event.stopPropagation(); 
+                    section.classList.remove('is-open');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
